@@ -11,6 +11,9 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
       }
+      article:nth-child(2) {
+        color: red;
+      }
     </style>
   </head>
   <body>
@@ -42,4 +45,24 @@
     </main>
     <footer></footer>
   </body>
+  <script>
+    const header = document.querySelector("header");
+    const article2 = document.querySelector("article:nth-child(2)");
+    const overskrift = document.querySelector("h1");
+    const underoverskrift = document.querySelector("h2");
+    const img1 = document.querySelector("img:nth-child(1)");
+    const img2 = document.querySelector("img:nth-child(2)");
+    const article1 = document.querySelector("article:nth-child(1)");
+    const p = document.querySelector("p");
+
+    console.log(header);
+    console.log(overskrift.textContent);
+    console.log(underoverskrift.textContent);
+    console.log(img1);
+    console.log(article1);
+    console.log(p.textContent);
+    console.log(img2);
+    console.log(article2);
+    console.log(p.textContent);
+  </script>
 </html>
