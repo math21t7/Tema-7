@@ -47,12 +47,14 @@
   </body>
   <script>
     const header = document.querySelector("header");
-    const article2 = document.querySelector("article:nth-child(2)");
+    const article2 = document.querySelector("article:nth-child(2) p");
     const overskrift = document.querySelector("h1");
     const underoverskrift = document.querySelector("h2");
     const img1 = document.querySelector("img:nth-child(1)");
     const img2 = document.querySelector("img:nth-child(2)");
-    const article1 = document.querySelector("article:nth-child(1)");
+    const article1 = document.querySelector("article:nth-child(1) p");
+    const firsth3 = document.querySelector("article:nth-child(1) h3");
+    const sndh3 = document.querySelector("article:nth-child(2) h3");
     const p = document.querySelector("p");
 
     console.log(header);
@@ -64,5 +66,12 @@
     console.log(img2);
     console.log(article2);
     console.log(p.textContent);
+
+    overskrift.textContent = "Yes, den er god nok";
+    firsth3.textContent = "Kan det være sandt?";
+    sndh3.innerHTML = "Jo, det er sandt";
+    article1.innerHTML = "Her står der noget spændende om den her artikel";
+    article2.innerHTML =
+      "Her står der <b>noget</b> spændende om den her artikel";
   </script>
 </html>
