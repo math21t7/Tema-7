@@ -1,0 +1,7 @@
+article {
+  display: grid;
+  grid-template-columns: repeat(auto-fit);
+}
+h1 {
+  text-align: center;
+}
