@@ -7,23 +7,38 @@
     <title>Document</title>
   </head>
   <body>
-    <article id="dyr">
-      <p>navn:gris,type:pattedyr,levested:svinefarme</p>
-      <img src="http://mabe-kea.dk/E19/pics/pig.png" alt="Billede af gris" />
-    </article>
+    <article id="dyr"></article>
+
     <script>
-      document.addEventListener("DOMContentLoaded", start);
-      function start() {
-        let dyr = {
-          navn: "gris",
-          type: "pattedyr",
-          billede: "http://mabe-kea.dk/E19/pics/pig.png",
-          levested: "svinefarme",
-        };
-        console.log(
-          `navn:${dyr.navn},type:${dyr.type},billede:${dyr.billede},levested:${dyr.levested}`
-        );
-      }
+      //dyr array
+      const dyr = {
+        navn: "gris",
+        type: "pattedyr",
+        billede: "http://mabe-kea.dk/E19/pics/pig.png",
+        levested: "svinefarme",
+      };
+      console.log(
+        `navn:${dyr.navn},type:${dyr.type},billede:${dyr.billede},levested:${dyr.levested}`
+      );
+
+      //DOM load
+      document.addEventListener("DOMContentLoaded", () => {
+        console.log("DOM loaded");
+
+        // destination (article)
+        const destination = document.querySelector("article");
+
+        //dyreinfo
+        const dyrInfo = `navn:${dyr.navn},type:${dyr.type},levested:${dyr.levested}`;
+
+        //indsæt tekst i destination (article)
+        destination.textContent = dyrInfo;
+
+        //tilføj billede
+        let pic = document.createElement("img");
+        pic.src = dyr.billede;
+        destination.appendChild(pic);
+      });
     </script>
   </body>
 </html>
