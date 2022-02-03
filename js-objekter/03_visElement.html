@@ -10,8 +10,8 @@
     <article id="dyr">
       <h3></h3>
       <img src="" alt="" />
-      <p id="type"></p>
-      <p id="levested"></p>
+      <p></p>
+      <p></p>
     </article>
     <script>
       document.addEventListener("DOMContentLoaded", start);
@@ -29,8 +29,12 @@
         const destination = document.querySelector("#dyr");
         destination.querySelector("h3").textContent = dyr.navn;
         destination.querySelector("img").src = dyr.billede;
-        destination.querySelector("#type").textContent = dyr.type;
-        destination.querySelector("#levested").textContent = dyr.levested;
+        destination.querySelector("p").textContent =
+          destination.querySelector("p").textContent + "" + dyr.type;
+        destination.querySelector("p:last-child").textContent =
+          destination.querySelector("p:last-child").textContent +
+          "" +
+          dyr.levested;
       }
     </script>
   </body>
