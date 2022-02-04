@@ -49,6 +49,8 @@
           klon.querySelector("img").src = dyr.billede;
           klon.querySelector(".type").textContent = "Type: " + dyr.type;
           klon.querySelector(".levested").textContent = "Levested: " + dyr.levested;
+
+          //tilføj objekt med array
           
             dyr.emner.forEach(emne =>{
                 klon.querySelector(".emneliste").innerHTML += "<li>" + emne + "</li>"
