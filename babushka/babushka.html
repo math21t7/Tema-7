@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Babushka</title>
     <style>
       *{
         box-sizing: border-box;
@@ -253,7 +253,7 @@
         function visDetaljer(ret){
         console.log(ret)
         popup.style.display="block";
-        popup.querySelector("img").src="/images/medium/"+ret.billednavn + "-md.jpg";
+        popup.querySelector("img").src="images/medium/"+ret.billednavn + "-md.jpg";
         popup.querySelector("h2").textContent=ret.navn;
         popup.querySelector(".langbeskriv").textContent=ret.langbeskrivelse;
         popup.querySelector(".pris").textContent=ret.pris + ",-";
