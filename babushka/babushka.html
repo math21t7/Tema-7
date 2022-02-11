@@ -24,6 +24,7 @@
     #menuknap {
       display: inline-block;
       place-content: start;
+      cursor:pointer;
     }
 
     #topnav1 a:visited {
@@ -283,7 +284,7 @@ function toggleMenu() {
   if (erSkjult == true) {
     document.querySelector("#menuknap").textContent = "☰";
   } else {
-    document.querySelector("#menuknap").textContent = "X";
+    document.querySelector("#menuknap").innerHTML = "&#x2715";
   }
 }
 
